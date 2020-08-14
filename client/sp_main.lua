@@ -1625,7 +1625,7 @@ function OpenPoliceActionsMenu()
             end, function(data2, menu2)
                 menu2.close()
             end)
-        elseif data.current.value == 'spawn_bouclier' and shieldActive == false then
+        elseif data.current.value == 'spawn_bouclier' and shieldActive == false then --need to sure that shield is not active before spawning another shield
             EnableShield()
         elseif data.current.value == 'remove_bouclier'  then
             DisableShield()
@@ -1706,7 +1706,6 @@ Citizen.CreateThread(function()
 		if shieldActive then
 			--ESX.ShowNotification('shield')
 
-			
 			
 			local ped = GetPlayerPed(-1)
 			------ can run without carrying the shield in font
